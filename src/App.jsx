@@ -12,27 +12,32 @@ function App() {
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
 
-   useEffect(() => {
+  useEffect(() => {
     const fetchTasks = async () => {
-      const response = await fetch(
-        "defaultTasks.json",
-        {
+      const savedTasks = localStorage.getItem("tasks");
+
+      if (savedTasks) {
+        setTasks(JSON.parse(savedTasks));
+      } else {
+        const response = await fetch("defaultTasks.json", {
           method: "GET",
-        }
-      );
-      const data = await response.json();
-      setTasks(data);
+        });
+        const data = await response.json();
+        setTasks(data);
+      }
     };
-   fetchTasks()
+    fetchTasks();
   }, []);
 
   function onTaskClick(taskId) {
     const newTasks = tasks.map((task) => {
+      // PRECISO ATUALIZAR ESSA TAREFA
       if (task.id === taskId) {
         return { ...task, isCompleted: !task.isCompleted };
-      } else {
-        return task;
       }
+
+      // NÃO PRECISO ATUALIZAR ESSA TAREFA
+      return task;
     });
     setTasks(newTasks);
   }
