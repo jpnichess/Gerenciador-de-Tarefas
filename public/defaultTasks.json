@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Estudar React",
+    "description": "Para ser um dev Front-End",
+    "isCompleted": false
+  },
+  {
+    "id": 2,
+    "title": "Estudar C#",
+    "description": "Para ser um dev Back-End",
+    "isCompleted": false
+  },
+  {
+    "id": 3,
+    "title": "Estudar Programação",
+    "description": "Para ser um dev Full-Stack",
+    "isCompleted": false
+  }
+]
