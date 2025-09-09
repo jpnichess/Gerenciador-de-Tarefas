@@ -8,7 +8,7 @@ Permite adicionar, remover, marcar como concluída e organizar suas tarefas do d
 ## 🚀 Tecnologias Utilizadas
 - [React](https://reactjs.org/) ⚛️
 - [Tailwind CSS](https://tailwindcss.com/) 🎨
-- [Vite](https://vitejs.dev/) ⚡ (opcional, se usado no projeto)
+- [Vite](https://vitejs.dev/) ⚡ 
 
 ---
 
